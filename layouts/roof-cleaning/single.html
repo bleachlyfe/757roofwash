@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $city := .Params.city }}
 {{ $phone := .Site.Params.phoneDisplay }}
-{{ $phoneHref := .Site.Params.phoneHref }}
+{{ $phoneHref := .Site.Params.phoneHref | safeURL }}
 
 <!-- HERO -->
 <section class="hero">

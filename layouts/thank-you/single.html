@@ -3,7 +3,7 @@
   <div class="wrap">
     <h1>Thanks &mdash; Your Quote Request Is In!</h1>
     <p style="color:var(--slate);">A member of our team will text or call you within 1 business day with your custom price. If it&rsquo;s urgent, call us now.</p>
-    <a class="btn btn-cta" href="{{ .Site.Params.phoneHref }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
+    <a class="btn btn-cta" href="{{ .Site.Params.phoneHref | safeURL }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
   </div>
 </section>
 

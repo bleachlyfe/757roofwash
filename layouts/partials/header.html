@@ -4,7 +4,7 @@
       <img src="/images/site/logo.webp" alt="{{ .Site.Params.businessName }}" class="brand-logo">
     </a>
     <div class="header-actions">
-      <a class="header-phone" href="{{ .Site.Params.phoneHref }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
+      <a class="header-phone" href="{{ .Site.Params.phoneHref | safeURL }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
       <a class="btn btn-cta" href="#quote-form">Get My Free Roof Quote</a>
     </div>
   </div>

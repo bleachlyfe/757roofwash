@@ -105,6 +105,11 @@ img{max-width:100%;display:block;}
 .header-actions .btn{font-size:.85rem;padding:10px 16px;}
 
 /* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  color:var(--white);
+  padding:48px 0 40px;
+}
 .hero-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
