@@ -2,7 +2,6 @@ baseURL = "https://757roofwash.com/"
 languageCode = "en-us"
 title = "757 Roof Wash | Soft Wash Roof Cleaning"
 
-
 [params]
   businessName = "Sudsy House Washing"
   phoneDisplay = "(757)-750-0400"

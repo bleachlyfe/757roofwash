@@ -7,7 +7,7 @@ metaTitle: "Soft Wash Roof Cleaning in Chesapeake, VA | Free Quote"
 metaDescription: "2-Year no-streak warranty on soft wash roof cleaning in Chesapeake, VA. Free 60-second quote. Call (757)-750-0400."
 gallery:
   - label: "Before"
-    image: ""
+    image: "/images/uploads/roof-cleaning-for-insurance-chesapeake-b1.webp"
   - label: "After"
-    image: ""
+    image: "/images/uploads/roof-cleaning-for-insurance-chesapeake-a1.webp"
 ---
