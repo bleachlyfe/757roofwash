@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "roof-cleaning"
+    label: "Roof Cleaning City Pages"
+    folder: "content/roof-cleaning"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title (internal)", name: "title", widget: "string" }
+      - { label: "URL Slug (e.g. /roof-cleaning-norfolk-va/)", name: "url", widget: "string", hint: "Must start and end with /" }
+      - { label: "City", name: "city", widget: "string", hint: "Used throughout the page copy, e.g. Norfolk" }
+      - { label: "Type", name: "type", widget: "hidden", default: "roof-cleaning" }
+      - { label: "Meta Title", name: "metaTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "text" }
+      - label: "Before/After Gallery"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+
+  - name: "legal"
+    label: "Legal Pages"
+    folder: "content/legal"
+    create: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Type", name: "type", widget: "hidden", default: "legal" }
+      - { label: "Body", name: "body", widget: "markdown" }
+

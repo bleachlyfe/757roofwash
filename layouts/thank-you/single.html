@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="section" style="padding-top:80px;padding-bottom:80px;text-align:center;">
+  <div class="wrap">
+    <h1>Thanks &mdash; Your Quote Request Is In!</h1>
+    <p style="color:var(--slate);">A member of our team will text or call you within 1 business day with your custom price. If it&rsquo;s urgent, call us now.</p>
+    <a class="btn btn-cta" href="{{ .Site.Params.phoneHref }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
+  </div>
+</section>
+
+<!-- Google Ads conversion event. Fires once, when this page loads after a
+     successful Netlify Forms submit. Requires the Conversion Action ID/label
+     from Google Ads > Goals > Conversions > "roof-quote-form-submit" (or similar). -->
+<script>
+  gtag('event', 'conversion', {
+    'send_to': '{{ .Site.Params.googleAdsConversionId }}/{{ .Site.Params.googleAdsConversionLabel }}'
+  });
+</script>
+{{ end }}

@@ -1,0 +1,214 @@
+{{ define "main" }}
+{{ $city := .Params.city }}
+{{ $phone := .Site.Params.phoneDisplay }}
+{{ $phoneHref := .Site.Params.phoneHref }}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Soft Wash Roof Cleaning in {{ $city }} With a 2-Year No-Streak Warranty</h1>
+    <p class="subhead">Right now we&rsquo;re upgrading {{ $city }} homeowners to our 2-Year Roof Protection Plan and including your first annual maintenance visit free when you book a Roof Revival cleaning.</p>
+
+    <ul class="benefit-list">
+      <li>Safely remove black streaks, algae, and moss</li>
+      <li>2-year no-streak warranty on your roof cleaning</li>
+      <li>First annual maintenance visit included</li>
+      <li>Fully insured, soft-wash specialists</li>
+    </ul>
+
+    <div class="trust-strip"><span class="stars">★★★★★</span> 5.0 average rating from 215+ Hampton Roads homeowners</div>
+
+    <form name="roof-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="lead-form" id="quote-form">
+      <input type="hidden" name="form-name" value="roof-quote" />
+      <input type="hidden" name="city" value="{{ $city }}" />
+      <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Mobile Phone</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="address">Service Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="timing">How soon are you looking to clean your roof?</label>
+      <select id="timing" name="timing">
+        <option>This week</option>
+        <option>This month</option>
+        <option>Just pricing for now</option>
+      </select>
+
+      <button type="submit" class="btn btn-cta btn-block">Get My Free Roof Quote</button>
+      <p class="hero-cta-note">Takes about 60 seconds to request. We&rsquo;ll send your custom quote within 1 business day.</p>
+    </form>
+    <a class="hero-secondary-cta" href="{{ $phoneHref }}">Tap to Call Now &ndash; {{ $phone }}</a>
+  </div>
+</section>
+{{ partial "rinse.html" (dict "onNavy" false) }}
+
+<!-- WHY US -->
+<section class="section">
+  <div class="wrap-wide">
+    <h2>Why {{ $city }} Homeowners Trust Us With Their Roofs</h2>
+    <div class="grid-3">
+      <div class="feature">
+        <h3>Soft-Wash Experts</h3>
+        <p>We use manufacturer-safe soft wash methods to protect your shingles and extend roof life.</p>
+      </div>
+      <div class="feature">
+        <h3>Fully Insured &amp; Professional</h3>
+        <p>Licensed, insured, uniformed crews who respect your home and landscaping.</p>
+      </div>
+      <div class="feature">
+        <h3>Upfront, Honest Pricing</h3>
+        <p>Clear quotes, tight arrival windows, and no surprise add-ons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER BREAKDOWN -->
+<section class="section section-alt">
+  <div class="wrap-wide">
+    <div class="offer-box">
+      <h2>Everything You Get With The Roof Revival + 2-Year Protection Plan</h2>
+      <p class="section-intro">Here&rsquo;s what&rsquo;s included when you book your Roof Revival in {{ $city }}:</p>
+
+      <div class="offer-sub">Core Service</div>
+      <ul class="check-list">
+        <li>Soft wash roof cleaning to remove black streaks, algae, and moss</li>
+        <li>Gutter clean-out and downspout flush</li>
+        <li>Debris removal from rooflines and valleys</li>
+        <li>Careful plant &amp; property protection every visit</li>
+      </ul>
+
+      <div class="offer-sub">Limited-Time Bonuses For Google Search Customers</div>
+      <ul class="check-list bonus-list">
+        <li>Bonus 1: 2-Year no-streak warranty upgrade (instead of our standard 1-year)</li>
+        <li>Bonus 2: First annual Roof Maintenance Visit included</li>
+        <li>Bonus 3: Roof Health Photo Report for your records</li>
+      </ul>
+
+      <div class="price-box"><strong>Most single-story homes</strong> with gutters cleaned and protected starting at $597. Get your exact price in 60 seconds.</div>
+      <p class="maint-note">Most customers choose to keep the Roof Maintenance Plan after the first free visit for just $299/year. Ask your technician if you&rsquo;d like to stay protected each year.</p>
+
+      <a class="btn btn-cta" href="#quote-form">Get My Free Roof &amp; Warranty Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER GALLERY -->
+<section class="section">
+  <div class="wrap-wide">
+    <h2>See What A Clean Roof Does For Curb Appeal</h2>
+    <div class="gallery-grid">
+      {{ range .Params.gallery }}
+      <div class="gallery-item">
+        {{ if .image }}
+          <img src="{{ .image | relURL }}" alt="{{ .label }} roof cleaning photo in {{ $city }}" loading="lazy">
+        {{ else }}
+          <div class="img-placeholder">Add photo in CMS</div>
+        {{ end }}
+        <span>{{ .label }}</span>
+      </div>
+      {{ else }}
+      <div class="gallery-item"><div class="img-placeholder">Before &ndash; add in CMS</div><span>Before</span></div>
+      <div class="gallery-item"><div class="img-placeholder">After &ndash; add in CMS</div><span>After</span></div>
+      {{ end }}
+    </div>
+    <p class="gallery-caption">We&rsquo;ve helped hundreds of {{ $city }} homeowners refresh their roofs and gutters.</p>
+  </div>
+</section>
+
+{{ partial "rinse.html" (dict "onNavy" false) }}
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt">
+  <div class="wrap-wide">
+    <h2>Three Simple Steps To A Cleaner, Protected Roof</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Request your 60-second quote</h3>
+        <p>Fill out the quick form or call us to get pricing for your home.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Pick your day</h3>
+        <p>Approve your quote and choose a date that works for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We clean &amp; protect your roof</h3>
+        <p>In one visit, we clean your roof and gutters and activate your 2-year protection plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARRANTY & SAFETY -->
+<section class="section">
+  <div class="wrap-wide">
+    <h2>Our 2-Year No-Streak Warranty &amp; Safety Promise</h2>
+    <div class="split-2">
+      <div class="card">
+        <h3>Warranty</h3>
+        <p>If black streaks return within 24 months of your Roof Revival, we&rsquo;ll re-treat that area free. And if you&rsquo;re not thrilled before we leave, you don&rsquo;t pay a cent.</p>
+      </div>
+      <div class="card">
+        <h3>Safety</h3>
+        <p>We use a dedicated ground tech to manage runoff, rinse plants, and protect your property. Our soft-wash methods are designed to clean effectively without blasting or damaging shingles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>Roof Cleaning Questions, Answered</h2>
+    <details class="faq-item">
+      <summary>Will soft washing damage my roof?</summary>
+      <p>No. We use low-pressure, manufacturer-recommended soft wash methods designed specifically for roofing materials, not high-pressure blasting.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What happens if it rains on my cleaning day?</summary>
+      <p>If the weather isn&rsquo;t right, we&rsquo;ll reschedule you to the next available slot that works for you. There&rsquo;s no fee to reschedule due to weather.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need to be home?</summary>
+      <p>Not necessarily. As long as we have access to your roof, water, and the areas we&rsquo;re cleaning, we can complete the job and send your Roof Health Photo Report afterward.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How long does a typical job take?</summary>
+      <p>Most homes are completed in about half a day or less, depending on roof size and condition.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do you protect my plants and landscaping?</summary>
+      <p>We pre-rinse and cover sensitive areas, manage runoff carefully, and rinse everything again when we&rsquo;re done to keep your plants safe.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What forms of payment do you accept?</summary>
+      <p>We accept major credit cards, debit cards, and checks at the time of service.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you offer other exterior cleaning services?</summary>
+      <p>Yes. Ask about our house washing, driveway and concrete cleaning, and other exterior services during your quote.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Ready For Your Roof To Look New Again?</h2>
+    <p>Claim your Roof Revival + 2-Year Protection Plan and first annual maintenance visit free.</p>
+    <a class="btn btn-cta" href="#quote-form">Get My Free Roof Quote</a>
+    <a class="header-phone" href="{{ $phoneHref }}">Call Now: {{ $phone }}</a>
+  </div>
+</section>
+{{ end }}

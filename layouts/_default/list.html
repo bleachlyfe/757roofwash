@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="section" style="padding-top:70px;">
+  <div class="wrap" style="text-align:center;">
+    <h1>757 Roof Wash</h1>
+    <p style="color:var(--slate);">Ad campaigns should point directly at a city page below, not this homepage.</p>
+    <div style="display:grid;gap:14px;max-width:360px;margin:24px auto 0;">
+      {{ range where .Site.RegularPages "Type" "roof-cleaning" }}
+      <a class="btn btn-cta" href="{{ .RelPermalink }}">{{ .Params.city }} Roof Cleaning Page</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

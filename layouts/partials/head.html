@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .Params.metaTitle }}{{ .Params.metaTitle }}{{ else }}{{ .Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Params.metaDescription }}{{ .Params.metaDescription }}{{ else }}{{ .Site.Params.businessName }}{{ end }}">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<link rel="icon" href="data:,">
+
+<!-- Google Ads: global site tag. Loads on every page so the conversion event on
+     /thank-you/ can fire. Replace Site.Params.googleAdsConversionId in config.toml
+     with the real AW-XXXXXXXXX ID once the Conversions action exists in Google Ads. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAdsConversionId }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAdsConversionId }}');
+</script>
