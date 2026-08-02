@@ -107,13 +107,20 @@ img{max-width:100%;display:block;}
 /* ---------- hero ---------- */
 .hero{
   position:relative;
-  background:
-    linear-gradient(180deg, rgba(16,35,47,.88) 0%, rgba(16,35,47,.94) 55%, rgba(16,35,47,.98) 100%),
-    url('/images/site/hero-technician-spraying.webp') center 25% / cover no-repeat;
+  background-color:var(--navy);
+  background-image:
+    linear-gradient(180deg, rgba(16,35,47,.45) 0%, rgba(16,35,47,.65) 55%, rgba(16,35,47,.85) 100%),
+    url('/images/site/hero-technician-spraying-banner.jpg');
+  background-position:center, right center;
+  background-size:cover, contain;
+  background-repeat:no-repeat, no-repeat;
   color:var(--white);
   padding:52px 0 44px;
 }
 .hero-content{max-width:560px;}
+@media (max-width:700px){
+  .hero{background-image:linear-gradient(180deg, rgba(16,35,47,.9) 0%, rgba(16,35,47,.96) 100%);}
+}
 .hero h1{
   font-size:clamp(1.7rem, 4vw, 2.5rem);
   color:var(--white);
