@@ -109,7 +109,7 @@ img{max-width:100%;display:block;}
   position:relative;
   background:
     linear-gradient(180deg, rgba(16,35,47,.88) 0%, rgba(16,35,47,.94) 55%, rgba(16,35,47,.98) 100%),
-    url('/images/site/hero-great-bridge-after.jpg') center 38% / cover no-repeat;
+    url('/images/site/hero-technician-spraying.webp') center 25% / cover no-repeat;
   color:var(--white);
   padding:52px 0 44px;
 }

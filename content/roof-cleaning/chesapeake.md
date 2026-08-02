@@ -12,8 +12,8 @@ gallery:
     after: "/images/uploads/roof-wash-after-chesapeake.jpg"
   - before: "/images/uploads/roof-cleaning-before-riverwalk-chesapeake.jpg"
     after: "/images/uploads/roof-cleaning-after-riverwalk-chesapeake.jpg"
-  - before: "/images/uploads/roof-cleaning-for-insurance-chesapeake-b1.webp"
-    after: "/images/uploads/roof-cleaning-for-insurance-chesapeake-a1.webp"
+  - before: "/images/uploads/soft-wash-roof-great-bridge-b1.jpg"
+    after: "/images/uploads/soft-wash-roof-great-bridge-a1.jpg"
 reviews:
   - name: "Ron R."
     rating: 5
