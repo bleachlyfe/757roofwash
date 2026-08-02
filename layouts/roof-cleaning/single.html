@@ -5,55 +5,48 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap-wide">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <h1>Soft Wash Roof Cleaning in {{ $city }} With a 2-Year No-Streak Warranty</h1>
-        <p class="subhead">Right now we&rsquo;re upgrading {{ $city }} homeowners to our 2-Year Roof Protection Plan and including your first annual maintenance visit free when you book a Roof Revival cleaning.</p>
+  <div class="wrap">
+    <div class="hero-content">
+      <h1>Soft Wash Roof Cleaning in {{ $city }} With a 2-Year No-Streak Warranty</h1>
+      <p class="subhead">Right now we&rsquo;re upgrading {{ $city }} homeowners to our 2-Year Roof Protection Plan and including your first annual maintenance visit free when you book a Roof Revival cleaning.</p>
 
-        <ul class="benefit-list">
-          <li>Safely remove black streaks, algae, and moss</li>
-          <li>2-year no-streak warranty on your roof cleaning</li>
-          <li>First annual maintenance visit included</li>
-          <li>Fully insured, soft-wash specialists</li>
-        </ul>
+      <ul class="benefit-list">
+        <li>Safely remove black streaks, algae, and moss</li>
+        <li>2-year no-streak warranty on your roof cleaning</li>
+        <li>First annual maintenance visit included</li>
+        <li>Fully insured, soft-wash specialists</li>
+      </ul>
 
-        <div class="trust-strip"><span class="stars">★★★★★</span> 5.0 average rating from 215+ Hampton Roads homeowners</div>
+      <div class="trust-strip"><span class="stars">★★★★★</span> 5.0 average rating from 215+ Hampton Roads homeowners</div>
 
-        <form name="roof-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="lead-form" id="quote-form">
-          <input type="hidden" name="form-name" value="roof-quote" />
-          <input type="hidden" name="city" value="{{ $city }}" />
-          <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+      <form name="roof-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/" class="lead-form" id="quote-form">
+        <input type="hidden" name="form-name" value="roof-quote" />
+        <input type="hidden" name="city" value="{{ $city }}" />
+        <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
 
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
 
-          <label for="phone">Mobile Phone</label>
-          <input type="tel" id="phone" name="phone" required>
+        <label for="phone">Mobile Phone</label>
+        <input type="tel" id="phone" name="phone" required>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-          <label for="address">Service Address</label>
-          <input type="text" id="address" name="address" required>
+        <label for="address">Service Address</label>
+        <input type="text" id="address" name="address" required>
 
-          <label for="timing">How soon are you looking to clean your roof?</label>
-          <select id="timing" name="timing">
-            <option>This week</option>
-            <option>This month</option>
-            <option>Just pricing for now</option>
-          </select>
+        <label for="timing">How soon are you looking to clean your roof?</label>
+        <select id="timing" name="timing">
+          <option>This week</option>
+          <option>This month</option>
+          <option>Just pricing for now</option>
+        </select>
 
-          <button type="submit" class="btn btn-cta btn-block">Get My Free Roof Quote</button>
-          <p class="hero-cta-note">Takes about 60 seconds to request. We&rsquo;ll send your custom quote within 1 business day.</p>
-        </form>
-        <a class="hero-secondary-cta" href="{{ $phoneHref }}">Tap to Call Now &ndash; {{ $phone }}</a>
-      </div>
-
-      <div class="hero-image">
-        <img src="/images/site/hero-roof-washing.png" alt="Sudsy House Washing technician soft washing a roof in {{ $city }}, VA" loading="eager">
-        <div class="hero-image-caption">Our own crew, our own equipment &mdash; no subcontractors</div>
-      </div>
+        <button type="submit" class="btn btn-cta btn-block">Get My Free Roof Quote</button>
+        <p class="hero-cta-note">Takes about 60 seconds to request. We&rsquo;ll send your custom quote within 1 business day.</p>
+      </form>
+      <a class="hero-secondary-cta" href="{{ $phoneHref }}">Tap to Call Now &ndash; {{ $phone }}</a>
     </div>
   </div>
 </section>
@@ -84,20 +77,6 @@
         </div>
         <h3>Upfront, Honest Pricing</h3>
         <p>Clear quotes, tight arrival windows, and no surprise add-ons.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST PHOTO BAND -->
-<section class="section trust-band">
-  <div class="wrap-wide">
-    <div class="trust-band-grid">
-      <div class="trust-band-item">
-        <img src="/images/site/hero-truck.webp" alt="Sudsy House Washing service truck on a job in {{ $city }}, VA" loading="lazy">
-      </div>
-      <div class="trust-band-item">
-        <img src="/images/site/intro-house-wash.webp" alt="Sudsy House Washing technician rinsing equipment before a soft wash job" loading="lazy">
       </div>
     </div>
   </div>
@@ -137,29 +116,48 @@
 <section class="section">
   <div class="wrap-wide">
     <h2>See What A Clean Roof Does For Curb Appeal</h2>
-    <div class="gallery-grid">
+    <div class="gallery-pairs">
       {{ range .Params.gallery }}
-      <div class="gallery-item">
-        {{ if .image }}
-          <img src="{{ .image | relURL }}" alt="{{ .label }} roof cleaning photo in {{ $city }}" loading="lazy">
-        {{ else }}
-          <div class="img-placeholder">Add photo in CMS</div>
-        {{ end }}
-        <span>{{ .label }}</span>
+      <div class="gallery-pair">
+        <div class="gallery-pair-item">
+          {{ if .before }}<img src="{{ .before | relURL }}" alt="Before roof cleaning near {{ $city }}, VA" loading="lazy">{{ else }}<div class="img-placeholder">Before &ndash; add in CMS</div>{{ end }}
+          <span>Before</span>
+        </div>
+        <div class="gallery-pair-item">
+          {{ if .after }}<img src="{{ .after | relURL }}" alt="After roof cleaning near {{ $city }}, VA" loading="lazy">{{ else }}<div class="img-placeholder">After &ndash; add in CMS</div>{{ end }}
+          <span>After</span>
+        </div>
       </div>
       {{ else }}
-      <div class="gallery-item"><div class="img-placeholder">Before &ndash; add in CMS</div><span>Before</span></div>
-      <div class="gallery-item"><div class="img-placeholder">After &ndash; add in CMS</div><span>After</span></div>
+      <div class="gallery-pair">
+        <div class="gallery-pair-item"><div class="img-placeholder">Before &ndash; add in CMS</div><span>Before</span></div>
+        <div class="gallery-pair-item"><div class="img-placeholder">After &ndash; add in CMS</div><span>After</span></div>
+      </div>
       {{ end }}
     </div>
     <p class="gallery-caption">We&rsquo;ve helped hundreds of {{ $city }} homeowners refresh their roofs and gutters.</p>
   </div>
 </section>
 
+<!-- REVIEW -->
+{{ with .Params.reviews }}
+<section class="section section-alt review-section">
+  <div class="wrap">
+    {{ range . }}
+    <div class="review-card">
+      <div class="review-stars">{{ range seq .rating }}★{{ end }}</div>
+      <p class="review-text">&ldquo;{{ .text }}&rdquo;</p>
+      <p class="review-attribution">{{ .name }} &middot; {{ .source }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 {{ partial "rinse.html" (dict "onNavy" false) }}
 
 <!-- HOW IT WORKS -->
-<section class="section section-alt">
+<section class="section steps-section">
   <div class="wrap-wide">
     <h2>Three Simple Steps To A Cleaner, Protected Roof</h2>
     <div class="steps">
