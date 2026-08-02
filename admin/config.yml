@@ -18,12 +18,21 @@ collections:
       - { label: "Type", name: "type", widget: "hidden", default: "roof-cleaning" }
       - { label: "Meta Title", name: "metaTitle", widget: "string" }
       - { label: "Meta Description", name: "metaDescription", widget: "text" }
-      - label: "Before/After Gallery"
+      - label: "Before/After Gallery Pairs"
         name: "gallery"
         widget: "list"
         fields:
-          - { label: "Label", name: "label", widget: "string" }
-          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Before Photo", name: "before", widget: "image", required: false }
+          - { label: "After Photo", name: "after", widget: "image", required: false }
+      - label: "Reviews"
+        name: "reviews"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name (abbreviate last name, e.g. 'Ron R.')", name: "name", widget: "string" }
+          - { label: "Rating (1-5)", name: "rating", widget: "number", default: 5, min: 1, max: 5 }
+          - { label: "Source", name: "source", widget: "string", default: "Google review" }
+          - { label: "Review Text", name: "text", widget: "text" }
 
   - name: "legal"
     label: "Legal Pages"

@@ -106,43 +106,14 @@ img{max-width:100%;display:block;}
 
 /* ---------- hero ---------- */
 .hero{
-  background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  position:relative;
+  background:
+    linear-gradient(180deg, rgba(16,35,47,.88) 0%, rgba(16,35,47,.94) 55%, rgba(16,35,47,.98) 100%),
+    url('/images/site/hero-great-bridge-after.jpg') center 38% / cover no-repeat;
   color:var(--white);
-  padding:48px 0 40px;
+  padding:52px 0 44px;
 }
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:44px;
-  align-items:start;
-}
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
-  .hero-image{order:-1;}
-}
-.hero-image{
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 20px 44px rgba(0,0,0,.35);
-  border:1px solid rgba(255,255,255,.15);
-}
-.hero-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  aspect-ratio:4/5;
-}
-@media (max-width:900px){
-  .hero-image img{aspect-ratio:16/9;}
-}
-.hero-image-caption{
-  background:var(--navy-2);
-  color:#CFE3E6;
-  font-size:.8rem;
-  padding:9px 14px;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,.1);
-}
+.hero-content{max-width:560px;}
 .hero h1{
   font-size:clamp(1.7rem, 4vw, 2.5rem);
   color:var(--white);
@@ -331,41 +302,59 @@ img{max-width:100%;display:block;}
 }
 .offer-box .btn{margin-top:22px;}
 
-/* trust photo band */
-.trust-band{padding-top:0;padding-bottom:8px;}
-.trust-band-grid{
+/* how it works - photo backdrop */
+.steps-section{
+  position:relative;
+  background:
+    linear-gradient(180deg, rgba(16,35,47,.85) 0%, rgba(16,35,47,.9) 100%),
+    url('/images/site/intro-house-wash.webp') center 30% / cover no-repeat;
+  color:var(--white);
+}
+.steps-section h2{color:var(--white);}
+.steps-section .step h3{color:var(--white);}
+.steps-section .step p{color:#CFE3E6;}
+
+/* before/after gallery - paired */
+.gallery-pairs{
+  display:grid;
+  gap:22px;
+}
+.gallery-pair{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-@media (max-width:700px){.trust-band-grid{grid-template-columns:1fr;}}
-.trust-band-item{
-  border-radius:var(--radius);
-  overflow:hidden;
-  aspect-ratio:16/10;
-}
-.trust-band-item img{width:100%;height:100%;object-fit:cover;}
-
-/* before/after gallery */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-}
-.gallery-item{
+  gap:4px;
   border-radius:var(--radius);
   overflow:hidden;
   border:1px solid #E4ECEE;
-  transition:box-shadow .15s ease;
+  box-shadow:0 8px 20px rgba(16,35,47,.06);
 }
-.gallery-item:hover{box-shadow:0 12px 28px rgba(16,35,47,.1);}
-.gallery-item img{
+.gallery-pair-item{
+  position:relative;
+  overflow:hidden;
+}
+.gallery-pair-item img{
+  width:100%;
+  height:100%;
   aspect-ratio:4/3;
   object-fit:cover;
   transition:transform .35s ease;
 }
-.gallery-item:hover img{transform:scale(1.04);}
-.gallery-item .img-placeholder{
+.gallery-pair-item:hover img{transform:scale(1.05);}
+.gallery-pair-item span{
+  position:absolute;
+  bottom:10px;left:10px;
+  padding:4px 12px;
+  border-radius:999px;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.75rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  background:rgba(16,35,47,.75);
+  color:var(--white);
+}
+.gallery-pair-item:last-child span{background:rgba(27,138,148,.85);}
+.gallery-pair-item .img-placeholder{
   aspect-ratio:4/3;
   background:repeating-linear-gradient(45deg, #E4ECEE, #E4ECEE 10px, #EFF4F5 10px, #EFF4F5 20px);
   display:flex;align-items:center;justify-content:center;
@@ -373,16 +362,35 @@ img{max-width:100%;display:block;}
   font-size:.8rem;
   font-family:var(--font-display);
 }
-.gallery-item span{
-  display:block;
+.gallery-caption{text-align:center;color:var(--slate);margin-top:20px;font-size:.92rem;}
+
+/* review */
+.review-section{padding-top:36px;padding-bottom:44px;}
+.review-card{
+  background:var(--white);
+  border:1px solid #E4ECEE;
+  border-radius:var(--radius);
+  padding:28px 30px;
   text-align:center;
-  padding:8px;
+  max-width:600px;
+  margin:0 auto;
+  box-shadow:0 8px 20px rgba(16,35,47,.05);
+}
+.review-stars{color:var(--star);letter-spacing:2px;font-size:1.1rem;margin-bottom:12px;}
+.review-text{
+  font-size:1.05rem;
+  color:var(--navy);
+  font-style:italic;
+  max-width:52ch;
+  margin:0 auto 14px;
+}
+.review-attribution{
   font-family:var(--font-display);
   font-weight:700;
   font-size:.85rem;
-  background:var(--white);
+  color:var(--slate);
+  margin:0;
 }
-.gallery-caption{text-align:center;color:var(--slate);margin-top:16px;font-size:.92rem;}
 
 /* how it works - numbered steps (legitimate: real 3-step process) */
 .steps{
