@@ -20,9 +20,10 @@ html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:var(--font-body);
+  font-weight:500;
   color:var(--navy);
   background:var(--white);
-  line-height:1.55;
+  line-height:1.6;
 }
 h1,h2,h3{
   font-family:var(--font-display);
@@ -122,8 +123,9 @@ img{max-width:100%;display:block;}
   color:var(--white);
 }
 .hero .subhead{
-  color:#CFE3E6;
-  font-size:1.05rem;
+  color:#DCEBED;
+  font-size:1.08rem;
+  font-weight:500;
   max-width:56ch;
 }
 .trust-strip{
@@ -142,9 +144,10 @@ img{max-width:100%;display:block;}
 .benefit-list li{
   padding-left:28px;
   position:relative;
-  margin-bottom:9px;
-  font-size:.98rem;
-  color:#E6EEF0;
+  margin-bottom:10px;
+  font-size:1.05rem;
+  font-weight:600;
+  color:#F0F5F6;
 }
 .benefit-list li:before{
   content:"✓";
@@ -254,7 +257,7 @@ img{max-width:100%;display:block;}
 }
 .feature-icon svg{width:24px;height:24px;}
 .feature h3{font-size:1.05rem;color:var(--navy);}
-.feature p{color:var(--slate);font-size:.95rem;margin:0;}
+.feature p{color:var(--slate);font-size:.98rem;font-weight:500;margin:0;}
 
 /* offer breakdown */
 .offer-box{
@@ -275,12 +278,19 @@ img{max-width:100%;display:block;}
   margin:22px 0 10px;
 }
 .check-list{list-style:none;margin:0;padding:0;}
+.benefit-list li strong,
 .check-list li{
   padding-left:26px;
   position:relative;
-  margin-bottom:10px;
-  color:#E6EEF0;
-  font-size:.97rem;
+  margin-bottom:11px;
+  color:#F0F5F6;
+  font-size:1.02rem;
+  font-weight:600;
+}
+.benefit-list li strong,
+.check-list li strong{
+  color:#6FE0E6;
+  font-weight:700;
 }
 .check-list li:before{
   content:"✓";
@@ -416,7 +426,7 @@ img{max-width:100%;display:block;}
   font-size:1.1rem;
 }
 .step h3{font-size:1.02rem;}
-.step p{color:var(--slate);font-size:.93rem;}
+.step p{color:var(--slate);font-size:.97rem;font-weight:500;}
 
 /* warranty/safety */
 .split-2{
@@ -436,7 +446,7 @@ img{max-width:100%;display:block;}
 .split-2 .card:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(16,35,47,.08);}
 .split-2 .card .feature-icon{margin-bottom:14px;}
 .split-2 .card h3{color:var(--navy);font-size:1.05rem;}
-.split-2 .card p{color:var(--slate);margin:0;font-size:.95rem;}
+.split-2 .card p{color:var(--slate);margin:0;font-size:.98rem;font-weight:500;}
 
 /* faq */
 .faq-list{display:grid;gap:12px;}
@@ -469,7 +479,7 @@ img{max-width:100%;display:block;}
   transition:transform .15s ease;
 }
 .faq-item[open] summary:after{content:"+"; transform:rotate(45deg);}
-.faq-item p{color:var(--slate);margin:10px 0 0;font-size:.95rem;}
+.faq-item p{color:var(--slate);margin:10px 0 0;font-size:.98rem;font-weight:500;}
 
 /* final CTA */
 .final-cta{
