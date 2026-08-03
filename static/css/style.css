@@ -493,6 +493,18 @@ img{max-width:100%;display:block;}
 .final-cta .btn{margin:0 auto;max-width:340px;}
 .final-cta .header-phone{display:block;margin-top:14px;color:var(--teal);}
 
+/* thank-you confirmation */
+.confirm-check{
+  width:72px;height:72px;
+  border-radius:50%;
+  background:rgba(27,138,148,.18);
+  border:2px solid var(--teal);
+  color:var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 22px;
+}
+.confirm-check svg{width:36px;height:36px;}
+
 /* footer */
 .site-footer{
   background:var(--navy);

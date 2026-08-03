@@ -1,9 +1,38 @@
 {{ define "main" }}
-<section class="section" style="padding-top:80px;padding-bottom:80px;text-align:center;">
-  <div class="wrap">
-    <h1>Thanks &mdash; Your Quote Request Is In!</h1>
-    <p style="color:var(--slate);">A member of our team will text or call you within 1 business day with your custom price. If it&rsquo;s urgent, call us now.</p>
-    <a class="btn btn-cta" href="{{ .Site.Params.phoneHref | safeURL }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
+<section class="hero" style="padding:56px 0;">
+  <div class="wrap-wide">
+    <div class="hero-content" style="max-width:640px;text-align:center;margin:0 auto;">
+      <div class="confirm-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h1>Thanks &mdash; Your Quote Request Is In!</h1>
+      <p class="subhead" style="margin:0 auto 26px;">A member of our team will text or call you within 1 business day with your custom price. If it&rsquo;s urgent, don&rsquo;t wait &mdash; give us a call right now.</p>
+      <a class="btn btn-cta" href="{{ .Site.Params.phoneHref | safeURL }}">Call Now: {{ .Site.Params.phoneDisplay }}</a>
+      <div class="trust-strip" style="margin-top:26px;"><span class="stars">★★★★★</span> 5.0 average rating from 215+ Hampton Roads homeowners</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-wide">
+    <h2>What Happens Next</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>We review your details</h3>
+        <p>Our team looks over your property info to prep an accurate quote.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We reach out</h3>
+        <p>Expect a call or text within 1 business day with your custom price.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We get you scheduled</h3>
+        <p>Pick a day that works, and we&rsquo;ll take it from there.</p>
+      </div>
+    </div>
   </div>
 </section>
 
