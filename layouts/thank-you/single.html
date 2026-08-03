@@ -36,12 +36,12 @@
   </div>
 </section>
 
-<!-- Google Ads conversion event. Fires once, when this page loads after a
-     successful Netlify Forms submit. Requires the Conversion Action ID/label
-     from Google Ads > Goals > Conversions > "roof-quote-form-submit" (or similar). -->
+<!-- Event snippet for Submit lead form conversion page -->
 <script>
   gtag('event', 'conversion', {
-    'send_to': '{{ .Site.Params.googleAdsConversionId }}/{{ .Site.Params.googleAdsConversionLabel }}'
+      'send_to': '{{ .Site.Params.googleAdsConversionId }}/{{ .Site.Params.googleAdsConversionLabel }}',
+      'value': 1.0,
+      'currency': 'USD'
   });
 </script>
 {{ end }}
